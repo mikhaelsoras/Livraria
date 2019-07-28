@@ -1,0 +1,25 @@
+﻿<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputTitulo">Titulo</label>
+            <input required type="text" class="form-control" id="inputTitulo"
+                   placeholder="Titulo" data-bind="textInput: titulo">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAutor">Autor</label>
+            <input required type="text" class="form-control" id="inputAutor"
+                   placeholder="Autor" data-bind="textInput: autor">
+        </div>
+    </div>
+    <button data-bind="click: $root.alterarLivroClick" class="btn btn-primary">Confirmar</button>
+</form>
+
+@section ScriptVariables {
+    <script type="text/javascript">
+        var id = @ViewData["Id"];
+    </script>
+}
+
+@section Scripts {
+    <script src="~/js/Livraria/alterarViewModel.js"></script>
+}

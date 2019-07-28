@@ -16,12 +16,40 @@ namespace Livraria.Controllers.Api
             _livrariaContext = livrariaContext;
         }
 
+        [HttpPatch]
+        public ActionResult<Livro> Alterar(int id, string titulo, string autor)
+        {
+            var livro = _livrariaContext.Livros.Where(x => x.Id == id).FirstOrDefault();
+            if (livro is null)
+                return NotFound("Livro não encontrado.");
+
+            livro.Autor = autor;
+            livro.Titulo = titulo;
+
+            _livrariaContext.SaveChanges();
+
+            return Json(livro);
+        }
+
         [HttpGet]
-        public ActionResult<List<Livro>> Carregar()
+        public ActionResult<List<Livro>> CarregarTodos()
         {
             var livros = from livro in _livrariaContext.Livros
                          select livro;
-            return livros.ToList();
+            return Json(livros.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult<Livro> Carregar(int id)
+        {
+            var livro = (from clivro in _livrariaContext.Livros
+                         where clivro.Id == id
+                         select clivro).FirstOrDefault();
+
+            if (livro is null)
+                return NotFound("Livro não encontrado.");
+
+            return Json(livro);
         }
 
         [HttpPost]

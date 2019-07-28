@@ -4,8 +4,9 @@
     removerLivroClick: function (livro) {
         excluirLivro(livro.id);
     },
-    editarLivroClick: function (livro) {
 
+    editarLivroClick: function (livro) {
+        window.location.href = '/Livraria/Alterar/' + livro.id;
     }
 }
 
@@ -31,7 +32,7 @@ function carregarLivros() {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: baseUrl + 'Api/Carregar',
+        url: baseUrl + 'Api/CarregarTodos',
         success: function (data) {
             vm.livros(data);            
         },

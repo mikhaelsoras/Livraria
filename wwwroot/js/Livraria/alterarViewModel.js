@@ -2,17 +2,18 @@
     autor: ko.observable(""),
     titulo: ko.observable(""),
 
-    cadastrarLivroClick: function () {
+    alterarLivroClick: function () {
         alterarLivro(vm.titulo(), vm.autor())
     }
 }
 
 function alterarLivro(titulo, autor) {
     $.ajax({
-        type: "POST",
-        url: baseUrl + 'Api/Cadastrar',
+        type: "PATCH",
+        url: baseUrl + 'Api/Alterar',
         dataType: "json",
         data: {
+            id: id,
             titulo: titulo,
             autor: autor
         },
@@ -25,6 +26,23 @@ function alterarLivro(titulo, autor) {
     });
 }
 
+function carregarLivro() {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        data: { id: id },
+        url: baseUrl + 'Api/Carregar',
+        success: function (data) {
+            vm.autor(data.autor);
+            vm.titulo(data.titulo);
+        },
+        error: function (request, error) {
+            alert("Request: " + JSON.stringify(request));
+        }
+    });
+}
+
 $(document).ready(function () {
     ko.applyBindings(vm);
+    carregarLivro();
 });

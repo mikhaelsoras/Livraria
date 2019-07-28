@@ -21,5 +21,11 @@ namespace Livraria.Controllers.Views
         {
             return View();
         }
+
+        public IActionResult Alterar(int id)
+        {
+            ViewData["Id"] = id;
+            return View();
+        }
     }
 }
