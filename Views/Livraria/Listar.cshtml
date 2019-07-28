@@ -1,0 +1,27 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: livros">
+        <tr>
+            <td data-bind="text: Id"></td>
+            <td data-bind="text: Titulo"></td>
+            <td data-bind="text: Autor"></td>
+        </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script src="~/js/Livraria/listarViewModel.js"></script>
+}

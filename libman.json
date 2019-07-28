@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "knockout@3.5.0",
+      "destination": "wwwroot/lib/knockout/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "twitter-bootstrap@4.3.1",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/lib/datatables/",
+      "files": [
+        "js/dataTables.bootstrap.js",
+        "js/jquery.dataTables.min.js",
+        "js/jquery.dataTables.js",
+        "js/dataTables.semanticui.js",
+        "js/dataTables.semanticui.min.js",
+        "js/dataTables.jqueryui.min.js",
+        "js/dataTables.jqueryui.js",
+        "js/dataTables.foundation.min.js",
+        "js/dataTables.foundation.js",
+        "js/dataTables.dataTables.min.js",
+        "js/dataTables.dataTables.js",
+        "js/dataTables.bootstrap4.min.js",
+        "js/dataTables.bootstrap4.js",
+        "js/dataTables.bootstrap.min.js",
+        "images/sort_asc.png",
+        "images/sort_asc_disabled.png",
+        "images/sort_both.png",
+        "images/sort_desc.png",
+        "images/sort_desc_disabled.png",
+        "css/jquery.dataTables.min.css",
+        "css/jquery.dataTables.css",
+        "css/dataTables.semanticui.min.css",
+        "css/dataTables.semanticui.css",
+        "css/dataTables.jqueryui.min.css",
+        "css/dataTables.jqueryui.css",
+        "css/dataTables.foundation.min.css",
+        "css/dataTables.foundation.css",
+        "css/dataTables.bootstrap.min.css",
+        "css/dataTables.bootstrap.css",
+        "css/dataTables.bootstrap4.min.css",
+        "css/dataTables.bootstrap4.css"
+      ]
+    }
+  ]
+}
