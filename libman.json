@@ -50,6 +50,10 @@
         "css/dataTables.bootstrap4.min.css",
         "css/dataTables.bootstrap4.css"
       ]
+    },
+    {
+      "library": "font-awesome@5.9.0",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }
