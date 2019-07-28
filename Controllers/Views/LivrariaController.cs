@@ -9,7 +9,7 @@ namespace Livraria.Controllers.Views
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Listar");
         }
 
         public IActionResult Cadastrar()
